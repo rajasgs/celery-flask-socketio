@@ -7,8 +7,13 @@ This repository contains an example code which shows the integration between Fla
 2. Create a virtualenv.  
 3. Install the requirements:`$ pip install -r requirements.txt`.  
 4. Open a second terminal window and start a local RabbitMQ server: `$ rabbitmq-server`.  
-5. Open a third terminal window and starta Celery worker: `$ venv/bin/celery worker -A app.celery --loglevel=info`.
-6. Start the Flask application on your original terminal window:`$ venv/bin/python app.py`.  
+5. Open a third terminal window and starta Celery worker: `$ celery worker -A app.celery --loglevel=info`.
+6. Start the Flask application on your original terminal window:`$ python app.py`.  
 7. Finally, go to `http://localhost:5000/`.  
 
 Hope it is helpful!
+
+
+### Issues:
+
+https://stackoverflow.com/questions/44104683/flask-socket-io-giving-redis-error-but-i-am-using-rabbitmq

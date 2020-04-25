@@ -1,9 +1,13 @@
 
+from gevent import monkey
+monkey.patch_all()
+
 from flask import Flask, render_template, request, session
 from flask_socketio import SocketIO, emit, join_room, rooms
 from celery import Celery 
 from flask_celery import make_celery
 import time
+
 
 
 # the app is an instance of the Flask class
@@ -14,8 +18,8 @@ app.config['SECRET_KEY'] = 'there is no secret'
 # CELERY_BROKER_URL is the URL where the message broker (RabbitMQ) is running
 # CELERY_RESULT_BACKEND is required to keep track of task and store the status
 app.config.update(
-CELERY_BROKER_URL = 'amqp://localhost//',  
-CELERY_RESULT_BACKEND='amqp://localhost//' 
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost',  
+CELERY_RESULT_BACKEND='amqp' 
 )
 
 # integrates Flask-SocketIO with the Flask application
