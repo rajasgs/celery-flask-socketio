@@ -22,4 +22,4 @@ http://localhost:5000/
 
 
 ### Issues:
-[](https://stackoverflow.com/questions/44104683/flask-socket-io-giving-redis-error-but-i-am-using-rabbitmq)
+[socketio monkey patch issues](https://stackoverflow.com/questions/44104683/flask-socket-io-giving-redis-error-but-i-am-using-rabbitmq)
