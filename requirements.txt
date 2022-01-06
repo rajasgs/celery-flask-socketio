@@ -1,6 +1,6 @@
 Flask==1.0.0
 Flask_SocketIO
-celery==4.1.1
+celery==5.2.2
 amqp
 kombu==4.6.8
 billiard==3.5.0.2
